@@ -17,7 +17,7 @@ display: flex;
 justify-content: center;
 }
 .content{
-    color: rgb(2, 183, 62);
+    color: rgb(61, 241, 112);
 }
 /* 
 ----------------------------------------------------------------------------------------
@@ -36,7 +36,7 @@ color: rgb(3, 53, 125);
 margin-top: 10px;
 }
 .vakken h3{
-    color: rgb(2, 183, 62);
+    color: rgb(61, 241, 112);
     background-color:  rgb(3, 53, 125);
 border-color: blue;
 padding: 5px;
