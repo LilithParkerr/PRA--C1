@@ -1,6 +1,6 @@
 html{
     font-family: Arial, Helvetica, sans-serif;
-    background-color: rgb(214, 225, 227);
+    background-color: rgb(230, 240, 242);
 }
 /* 
 ----------------------------------------------------------------------------------------romy
@@ -91,3 +91,23 @@ margin-bottom: 35px;
 /* 
 ----------------------------------------------------------------------------------------romy
 */
+.blokContainer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.blokTitel{
+    background-color:rgb(3, 53, 125) ;
+    color:rgb(61, 241, 112) ;
+    padding: 5px;
+    margin-bottom: 35px;
+}
+
+.blokImg{
+    margin-bottom: 35px;
+}
+
+.blokText{
+    color:rgb(3, 53, 125) ;
+}
