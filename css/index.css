@@ -30,6 +30,7 @@ section{
     justify-content: center;
     background-color: rgb(61, 241, 112);
     color: rgb(3, 53, 125);
+    clip-path: ellipse(85% 100% at bottom);
 }
 
 /* 
@@ -87,6 +88,7 @@ margin-bottom: 35px;
     color:rgb(3, 53, 125) ;
 
 }
+
 
 /* 
 ----------------------------------------------------------------------------------------romy
