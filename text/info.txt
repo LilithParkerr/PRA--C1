@@ -15,3 +15,6 @@ hebben. Lukt het je niet een erkend leerbedrijf te vinden? Dan kun je je inschri
 
 
 https://www.curio.nl/mbo/techniek-en-technologie/softwaredeveloper/software-developer
+
+
+font-family: Fellix, Helvetica Neue, Helvetica, Arial, sans-serif;
