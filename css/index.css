@@ -5,17 +5,50 @@ html{
 /* 
 ----------------------------------------------------------------------------------------romy
 */
-header{
-display: flex;
-justify-content: space-evenly;
-padding-left: 95px;
-align-items: center;
-clip-path: ellipse(85% 100% at top);
-position: sticky;
-    top: 0;
+main {
+    margin-top: 100px; /* Pushes content below fixed header */
+    position: relative;
+    min-height: 100vh;
+    width: 100%;
+    margin-bottom: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 1rem;
+    text-align: center;
+}
 
-background-color:  rgb(3, 53, 125);
-width: 100%;
+main::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('../img/background.jpg'); /* Path to your image */
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    opacity: 0.4; /* Makes only the background 50% transparent */
+    z-index: -1; /* Places the background behind the content */
+}
+
+/* 
+----------------------------------------------------------------------------------------romy
+*/
+header{
+    display: flex;
+    justify-content: space-evenly;
+    padding: 20px 95px; /* Reduce padding to prevent overlap */
+    align-items: center;
+    clip-path: ellipse(85% 100% at top);
+    position: fixed; /* Keeps the header on top */
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: rgb(3, 53, 125);
+    z-index: 1000; /* Ensures it stays above other content */
 }
 .logo{
 display: flex;
@@ -31,14 +64,15 @@ justify-content: center;
 section{
     display: flex;
     justify-content: center;
+    align-items: center;
     background-color: rgb(61, 241, 112);
     color: rgb(3, 53, 125);
     height: 60px;
-    position: absolute;
-    top: 	89px;
-    z-index: -1;
-    width: 	100%;
-padding-top: 10px;
+    position: relative;
+    z-index: 1; /* Ensure this section appears above the background */
+    width: 100%;
+    padding: 80px 10px 10px; /* Adds space for the fixed header */
+    margin-top: 70px; /* Push section below the fixed header */
 }
 
 /* 
@@ -56,6 +90,7 @@ margin-top: 5pxpx;
 
 color: rgb(3, 53, 125);
 margin-top: 10px;
+
 }
 .vakken h3{
     color: rgb(61, 241, 112);
@@ -72,7 +107,7 @@ margin-top: 75px;
 .imgContainer{
     display: flex;
     justify-content: center;
-    padding-top: 50px;
+    padding-top: 120px; /* Adjust to avoid overlap with header */
     padding-bottom: 50px;
     
 }
@@ -84,6 +119,7 @@ margin-top: 75px;
     display: flex;
     flex-direction: column;
     align-items: center;
+    margin-top: 120px; /* Push it below fixed header */
 }
 .roosterTitel{
     background-color:rgb(3, 53, 125) ;
@@ -164,3 +200,23 @@ footer{
     justify-content: space-between;
     align-items: center;
 }
+
+/* 
+----------------------------------------------------------------------------------------romy
+*/
+
+h1 {
+    font-size: 1.8rem; /* Adjust heading size */
+}
+
+h2 {
+    font-size: 1.5rem;
+}
+
+h3 {
+    font-size: 1.2rem;
+}
+/* 
+----------------------------------------------------------------------------------------romy
+*/
+

@@ -21,7 +21,7 @@
             <b>indeling blokken</b>
         </div>
         <div class="content">
-            <b>mogelijkheid versnelling</b>
+            <b>keuze tussen BOL en BBL</b>
         </div>
         <nav>
             
@@ -134,12 +134,104 @@
 
 
 </main>
+<!-- Carousel Section Added Below the Last Main -->
+<main>
+    <div class="carousel-container">
+        <div class="carousel-images">
+            <!-- Add your images here -->
+            <img src="img/rondje1.jpg" alt="persoon 1">
+            <img src="img/rondje2.jpg" alt="persoon 2">
+            <img src="img/rondje3.jpg" alt="persoon 3">
+            <img src="img/rondje4.jpg" alt="persoon 4">
+            <img src="img/rondje5.jpg" alt="persoon 5">
+        </div>
 
+        <button class="arrow arrow-left" id="prev">&#10094;</button>
+        <button class="arrow arrow-right" id="next">&#10095;</button>
+    </div>
+</main>
+<style>
+    /* Carousel Styles */
+    .carousel-container {
+        position: relative;
+        width: 800px; /* Width of the container */
+        height: 400px; /* Set height as needed */
+        overflow: hidden; /* Hide the overflowed part of the images */
+        margin: 0 auto; /* Center the carousel */
+    }
+
+    .carousel-images {
+        display: flex;
+        transition: transform 0.5s ease-in-out;
+    }
+
+    .carousel-images img {
+        width: 100%; /* Make sure each image fills the container */
+        height: 100%; /* Keep the images proportional to the container's height */
+        object-fit: cover; /* This ensures the image covers the container without distortion */
+    }
+
+    /* Arrows styles */
+    .arrow {
+        position: absolute;
+        top: 50%;
+        background-color: rgba(0, 0, 0, 0.5);
+        color: white;
+        border: none;
+        padding: 15px;
+        cursor: pointer;
+        z-index: 10;
+        font-size: 24px;
+        transform: translateY(-50%);
+    }
+
+    .arrow-left {
+        left: 10px;
+    }
+
+    .arrow-right {
+        right: 10px;
+    }
+</style>
     <footer>
 
      <div class="footerText"   <p>&copy; Romy van Pelt, 2025</p> </div>
      <div class="footerImg"><img src="img/softwareLogo.png" alt="logo" height="50px" width="100px"></div>
     </footer>
+
+
+
+    <script>
+        const images = document.querySelector('.carousel-images');
+        const totalImages = document.querySelectorAll('.carousel-images img').length;
+        let index = 0;
+
+        // Show the next image
+        document.getElementById('next').addEventListener('click', () => {
+            if (index < totalImages - 1) {
+                index++;
+            } else {
+                index = 0;
+            }
+            updateCarousel();
+        });
+
+        // Show the previous image
+        document.getElementById('prev').addEventListener('click', () => {
+            if (index > 0) {
+                index--;
+            } else {
+                index = totalImages - 1;
+            }
+            updateCarousel();
+        });
+
+        // Update the carousel position
+        function updateCarousel() {
+            const newTransformValue = -index * 100;
+            images.style.transform = `translateX(${newTransformValue}%)`;
+        }
+    </script>
 </body>
 
 </html>
